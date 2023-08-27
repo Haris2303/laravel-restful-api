@@ -1,0 +1,85 @@
+### Register User API
+POST http://localhost:8000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "",
+    "password": "otong",
+    "name": "Otong Surotong"
+}
+
+### Login User API
+POST http://localhost:8000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "otong",
+    "password": "rahasia"
+}
+
+### Get Current User API
+GET http://localhost:8000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 4f6f8da4-b92a-46e4-98fc-989cf18599d5
+
+
+### Update Current User API
+PATCH http://localhost:8000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 4f6f8da4-b92a-46e4-98fc-989cf18599d5
+
+{
+    "name": "Otong Surotong",
+    "password": "rahasia"
+}
+
+### Logout Current User API
+DELETE http://localhost:8000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 4f6f8da4-b92a-46e4-98fc-989cf18599d5
+
+
+### Create Contact API
+POST http://localhost:8000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 4f6f8da4-b92a-46e4-98fc-989cf18599d5
+
+{
+    "first_name": "Niki",
+    "last_name": "Junior",
+    "email": "niki@gmail.com",
+    "phone": "08234123411234"
+}
+
+
+### UPDATE Contact API
+PUT http://localhost:8000/api/contacts/14266
+Content-Type: application/json
+Accept: application/json
+Authorization: 4f6f8da4-b92a-46e4-98fc-989cf18599d5
+
+{
+    "first_name": "Revaya Cool",
+    "last_name": "Senior",
+    "email": "revaya@gmail.com",
+    "phone": "08234123411234"
+}
+
+### Get List Contact
+GET http://localhost:8000/api/contacts?name=
+Content-Type: application/json
+Accept: application/json
+Authorization: 4f6f8da4-b92a-46e4-98fc-989cf18599d5
+
+
+### Delete Contact
+DELETE http://localhost:8000/api/contacts/14266
+Content-Type: application/json
+Accept: application/json
+Authorization: 4f6f8da4-b92a-46e4-98fc-989cf18599d5
